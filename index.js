@@ -3,6 +3,8 @@ const fs = require("fs")
 const client = new Discord.Client()
 const Embeds = require('./embed')
 
+const config = JSON.parse(fs.readFileSync('config.json', 'utf8'))
+
 client.on("ready", async => {
     console.log('Bot logged in as ' + client.user.tag)
     console.log('Der Bot ist auf ' + client.guilds.cache.size + ' Servern.')
@@ -41,4 +43,4 @@ client.on('message', (msg) => {
     }
 })
 
-client.login('ODY5NTQ5NTczMjM5MTA3NjI0.YP_1JQ.lrX1Cg9WVkcoBLYl1yHCp191v0E')
+client.login(config.token)
