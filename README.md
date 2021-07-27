@@ -1,2 +1,2 @@
-# iobuddy
-The token must be in the `config.json` file
+# I/O Buddy
+I/O Buddy ist ein Discord Bot von TillDV...
